@@ -1,8 +1,12 @@
 package trilha.back.financys.entities;
 
-public class Entry {
 
-    private long id;
+//import com.fasterxml.jackson.annotation.JsonFormat;
+//import java.time.LocalDate;
+
+public class Lancamentos {
+
+
     private String name;
     private String description;
     private String type;
@@ -11,12 +15,11 @@ public class Entry {
     private boolean paid;
     private long categoryId;
 
-    public Entry() {
+    public Lancamentos() {
     }
 
-    public Entry(long id, String name, String description, String type, String amount, String date,
-                 boolean paid, long categoryId) {
-        this.id = id;
+    public Lancamentos(String name, String description, String type, String amount, String date,
+                       boolean paid, long categoryId) {
         this.name = name;
         this.description = description;
         this.type = type;
@@ -24,14 +27,6 @@ public class Entry {
         this.date = date;
         this.paid = paid;
         this.categoryId = categoryId;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -90,17 +85,20 @@ public class Entry {
         this.categoryId = categoryId;
     }
 
-    @Override
-    public String toString() {
-        return "Entry{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", type='" + type + '\'' +
-                ", amount='" + amount + '\'' +
-                ", date='" + date + '\'' +
-                ", paid=" + paid +
-                ", categoryId=" + categoryId +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Lancamentos{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", description='" + description + '\'' +
+//                ", type='" + type + '\'' +
+//                ", amount='" + amount + '\'' +
+//                ", date='" + date + '\'' +
+//                ", paid=" + paid +
+//                ", categoryId=" + categoryId +
+//                '}';
+//    }
+
+//    @JsonFormat (pattern = "dd/MM/yyyy")
+//    private LocalDate dataEntry;
 }

@@ -1,26 +1,21 @@
 package trilha.back.financys.entities;
 
+
 public class Category {
 
-    private long id;
     private String name;
     private String description;
+
 
     public Category() {
     }
 
-    public Category(long id, String name, String description) {
-        this.id = id;
+    public Category(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public Category(int indexOf) {
     }
 
     public String getName() {
@@ -39,12 +34,5 @@ public class Category {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Category{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
+
 }
